@@ -1,0 +1,31 @@
+"""
+Задание 2
+Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента.
+Подсказка: элементы, удовлетворяющие условию, оформить в виде списка. Для формирования списка использовать генератор.
+"""
+
+from functools import partial
+
+my_list = [281, 10, 104, 78, 219, 118, 251, 95, 56, 86, 37, 41, 183, 206, 200, 315]
+# нужный результат: [104, 219, 251, 86, 41, 183, 206, 315]
+
+
+def my_func(prev_el, el):
+    """
+    Сравнивает числа с помощью функции partial
+
+    :param prev_el: int
+    :param el: int
+    :return: int
+    """
+    global part_func
+    part_func = partial(my_func, el)
+    if prev_el < el:
+        return el
+
+
+part_func = partial(my_func, my_list[0])
+
+new_list = [el for el in my_list[1:] if part_func(el) is not None]
+
+print(new_list)
