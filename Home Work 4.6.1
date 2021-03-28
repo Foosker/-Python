@@ -1,0 +1,20 @@
+"""
+Задание 6
+Итератор, генерирующий целые числа, начиная с указанного
+"""
+
+from sys import argv
+from itertools import count
+
+print("\nИтератор, генерирующий целые числа, начиная с указанного\n")
+
+script_name, start = argv
+start = int(start)
+
+fin = start + 5
+
+for i in count(start):
+    print(i)
+    if i >= fin:
+        print("\nВывод чисел завершён.")
+        break
