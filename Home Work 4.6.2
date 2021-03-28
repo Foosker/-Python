@@ -1,1 +1,19 @@
+"""
+Задание 6
+Итератор, повторяющий элементы некоторого списка, определенного заранее.
+"""
 
+from itertools import cycle
+
+print("\nИтератор, повторяющий элементы некоторого списка, определенного заранее\n")
+
+my_list = ["ABC", "DEF", "GHI", "JKL", "MNO"]
+
+counter = 0
+
+for el in cycle(my_list):
+    counter += 1
+    print(el)
+    if counter >= 7:
+        print("\nВывод элементов списка завершён.")
+        break
