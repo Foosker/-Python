@@ -1,0 +1,26 @@
+"""
+Задание 2
+Выполнить функцию, которая принимает несколько параметров, описывающих данные пользователя: имя, фамилия, год рождения,
+город проживания, email, телефон. Функция должна принимать параметры как именованные аргументы.
+Осуществить вывод данных о пользователе одной строкой.
+"""
+
+
+def print_user_data(**kwargs):
+    print(kwargs)
+
+# Для быстрой проверки функции
+'''
+print_user_data(name="Ian",
+                surname="Curtis", 
+                year_of_birth=1956, 
+                city_of_residence="Macclesfield", 
+                email=None, 
+                phone_number=None)
+'''
+print_user_data(name=input("Введите имя: ").title(),
+                surname=input("Введите фамилию: ").title(),
+                year_of_birth=int(input("Введите год рождения: ")),
+                city_of_residence=input("Введите город проживания: ").title(),
+                email=input("Введите адрес электронной почты: "),
+                phone_number=int(input("Введите телефонный номер: ")))
