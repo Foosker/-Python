@@ -1,0 +1,6 @@
+first string
+second string
+third string
+one more, fourth string
+and fifth string
+sixth and last string
