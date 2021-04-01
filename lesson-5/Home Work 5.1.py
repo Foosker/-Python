@@ -4,6 +4,7 @@
 Об окончании ввода данных свидетельствует пустая строка.
 """
 
+
 with open("text_file_1.txt", "w") as text_file:
     while True:
         user_input = input("Введите строку: ")
