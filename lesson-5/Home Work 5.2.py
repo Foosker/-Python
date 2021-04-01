@@ -4,6 +4,7 @@
 количества слов в каждой строке.
 """
 
+
 with open("text_file_2.txt", "r") as file:
     content = file.readlines()
     print(f"\nКоличество строк всего: {len(content)}\n")
