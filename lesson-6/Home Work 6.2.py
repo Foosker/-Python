@@ -9,10 +9,9 @@
 
 
 class Road:
-    def __init__(self, _length, _width):
-        self.__length = _length
-        self.__width = _width
-        self.__mass_of_one_meter = 25  # масса на 1 кв.м.
+    __length = 20
+    __width = 5000
+    __mass_of_one_meter = 25  # масса на 1 кв.м
 
     def total_mass_calculation(self, canvas_thickness):
         result = self.__length * self.__width * self.__mass_of_one_meter * canvas_thickness
@@ -22,5 +21,5 @@ class Road:
             return str(result) + " кг"        # результат в килограммах
 
 
-high = Road(20, 5000)
+high = Road()
 print(high.total_mass_calculation(canvas_thickness=5))
