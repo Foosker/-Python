@@ -11,16 +11,13 @@ from time import time
 
 
 class TrafficLight:
-
     __colors = ["Красный", "Жёлтый", "Зелёный"]
     __color_index = 0  # Индекс списка, для color
-
-    def __init__(self):
-        self.__color = self.__colors[self.__color_index]
+    __color = __colors[__color_index]
 
     def __status_update(self):
         """
-        Меняет цвет светофора и выводит в консоль, обновляет таймер
+        Выводит в консоль цвет светофора, обновляет таймер
         """
 
         self.__color = self.__colors[self.__color_index]
